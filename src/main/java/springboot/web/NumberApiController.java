@@ -24,7 +24,7 @@ public class NumberApiController {
     }
 
     @PostMapping("admin/management/number")
-    public long save(@RequestBody final NumberRequestDto params){
+    public Long save(@RequestBody final NumberRequestDto params){
         return numberService.save(params);
     }
 

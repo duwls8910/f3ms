@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import springboot.domain.number.Number;
 
+import java.time.LocalDate;
 import java.util.Date;
 @Getter
 @NoArgsConstructor
@@ -13,9 +14,9 @@ public class NumberRequestDto {
 
     private int number_id;
 
-    private Date start_date; //기수 프로젝트 시작일
+    private LocalDate start_date; //기수 프로젝트 시작일
 
-    private Date end_date; //기수 프로젝트 종료일
+    private LocalDate end_date; //기수 프로젝트 종료일
 
     private String comment; //기수 특이사항
 
@@ -38,7 +39,6 @@ public class NumberRequestDto {
                 .start_date(start_date)
                 .end_date(end_date)
                 .comment(comment)
-                .is_closed(is_closed)
                 .build();
     }
 }

@@ -3,8 +3,10 @@ import springboot.domain.number.Number;
 import lombok.Getter;
 
 import javax.persistence.Column;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
 
@@ -14,23 +16,23 @@ public class NumberResponseDto {
 
     private Long id;
 
-    private int number_id;
+    private Number number_id;;
 
-    private Date start_date; //기수 프로젝트 시작일
+    private LocalDate start_date; //기수 프로젝트 시작일
 
-    private Date end_date; //기수 프로젝트 종료일
+    private LocalDate end_date; //기수 프로젝트 종료일
 
     private String comment; //기수 특이사항
 
     private Boolean is_closed; //기수 종료여부 진행시 = true
 
-    private LocalDateTime created_date;
+    private LocalDate created_date;
 
-    private LocalDateTime updated_date;
+    private LocalDate updated_date;
 
     public NumberResponseDto(Number entity){
         this.id = entity.getId();
-        this.number_id = entity.getNumber_id();
+        this.number_id = entity;
         this.start_date = entity.getStart_date();
         this.end_date = entity.getEnd_date();
         this.comment = entity.getComment();
