@@ -19,8 +19,14 @@ public class NumberService {
 
     @Transactional
     public Long save(final NumberRequestDto params){
-        Number entity = numberRepository.save(params.toEntity());
-        return entity.getId();
+        Number sameNameCheck =numberRepository.findByNumber_name(params.getNumber_name());
+        if(sameNameCheck== null){
+            Number entity = numberRepository.save(params.toEntity());
+            return entity.getId();
+        }else{
+            return 404L;
+        }
+
     }
     @Transactional
     public List<NumberResponseDto> findAll() {
@@ -32,7 +38,7 @@ public class NumberService {
     @Transactional
     public Long update(final Long id, final NumberRequestDto params){
         Number entity = numberRepository.findById(id)
-                .orElseThrow(()-> new IllegalArgumentException("해당 기수가 없습니다"));
+                .orElseThrow(()-> new IllegalArgumentException("no.."));
         entity.update(params.getStart_date(),params.getEnd_date(),params.getComment(), params.getIs_closed());
         return id;
     }
@@ -40,7 +46,7 @@ public class NumberService {
     @Transactional
     public NumberResponseDto findById(final Long id){
         Number entity = numberRepository.findById(id)
-                .orElseThrow(()-> new IllegalArgumentException("해당 기수가 없습니다"));
+                .orElseThrow(()-> new IllegalArgumentException("no.."));
         return new NumberResponseDto(entity);
     }
 
