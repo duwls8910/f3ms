@@ -16,7 +16,7 @@ public class NumberResponseDto {
 
     private Long id;
 
-    private Number number_id;;
+    private int number_name;
 
     private LocalDate start_date; //기수 프로젝트 시작일
 
@@ -32,13 +32,15 @@ public class NumberResponseDto {
 
     public NumberResponseDto(Number entity){
         this.id = entity.getId();
-        this.number_id = entity;
+        this.number_name = entity.getNumber_name();
         this.start_date = entity.getStart_date();
         this.end_date = entity.getEnd_date();
         this.comment = entity.getComment();
         this.is_closed = entity.getIs_closed();
         this.created_date = entity.getCreated_date();
         this.updated_date = entity.getUpdated_date();
+//this.id = entity 타입 객체로 놓고 이렇게 하면 전체가 뜸 (위의 필드는 해당 객체 값)
+        //굿
 
     }
 }

@@ -1,6 +1,8 @@
 package springboot.web;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import springboot.service.number.NumberService;
 import springboot.web.dto.number.NumberResponseDto;
@@ -10,27 +12,30 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
+@RequestMapping("admin/management/number")
 public class NumberApiController {
     private final NumberService numberService;
 
-    @GetMapping("admin/management/number")
-    public List<NumberResponseDto> findAll() {
-        return numberService.findAll();
+
+    @GetMapping("")
+    public ResponseEntity<List<NumberResponseDto>> findAll() {
+        return ResponseEntity.ok().body(numberService.findAll());
     }
 
-    @GetMapping("admin/management/number/{id}")
-    public NumberResponseDto findById(@PathVariable Long id) {
-        return numberService.findById(id);
+
+    @GetMapping("/{id}")
+    public ResponseEntity<NumberResponseDto> findById(@PathVariable Long id) {
+        return ResponseEntity.ok().body(numberService.findById(id));
     }
 
-    @PostMapping("admin/management/number")
-    public Long save(@RequestBody final NumberRequestDto params){
-        return numberService.save(params);
+    @PostMapping("")
+    public ResponseEntity<Long> save(@RequestBody final NumberRequestDto params){
+        return ResponseEntity.ok().body(numberService.save(params));
     }
 
-    @PutMapping("admin/management/number/{id}")
-    public Long save(@PathVariable final Long id,@RequestBody final NumberRequestDto params){
-        return numberService.update(id, params);
+    @PutMapping("/{id}")
+    public ResponseEntity<Long> update(@PathVariable final Long id,@RequestBody final NumberRequestDto params){
+        return ResponseEntity.ok().body(numberService.update(id, params));
     }
 
 }

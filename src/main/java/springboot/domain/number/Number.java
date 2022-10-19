@@ -1,31 +1,21 @@
 package springboot.domain.number;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import springboot.domain.team.Team;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-@Getter @Setter
+@Getter
 @NoArgsConstructor
 @Entity
 public class Number {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     private Long id;
 
-    @Column(nullable = false)
-    private int number_id; //기수
+    @Column(nullable = false) @NonNull
+    private int number_name; //기수
 
     private LocalDate start_date; //기수 프로젝트 시작일
 
@@ -38,15 +28,13 @@ public class Number {
 
     private LocalDate created_date = LocalDate.now();
 
-    private LocalDate updated_date;
+    private LocalDate updated_date= LocalDate.now();
 
-//    @JsonIgnore
-//    @OneToMany(mappedBy = "number")
-//    private List<Team> team = new ArrayList<>();
+
 
     @Builder
-    public Number(int number_id, LocalDate start_date, LocalDate end_date, String comment){
-        this.number_id = number_id;
+    public Number(int number_name, LocalDate start_date, LocalDate end_date, String comment){
+        this.number_name = number_name;
         this.start_date = start_date;
         this.end_date = end_date;
         this.comment = comment;

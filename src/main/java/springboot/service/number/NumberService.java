@@ -32,7 +32,7 @@ public class NumberService {
     @Transactional
     public Long update(final Long id, final NumberRequestDto params){
         Number entity = numberRepository.findById(id)
-                .orElseThrow(()-> new IllegalArgumentException("해당 기수가 없습니다"));
+                .orElseThrow(()-> new IllegalArgumentException("no.."));
         entity.update(params.getStart_date(),params.getEnd_date(),params.getComment(), params.getIs_closed());
         return id;
     }
@@ -40,7 +40,7 @@ public class NumberService {
     @Transactional
     public NumberResponseDto findById(final Long id){
         Number entity = numberRepository.findById(id)
-                .orElseThrow(()-> new IllegalArgumentException("해당 기수가 없습니다"));
+                .orElseThrow(()-> new IllegalArgumentException("no.."));
         return new NumberResponseDto(entity);
     }
 

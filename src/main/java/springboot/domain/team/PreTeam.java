@@ -1,9 +1,6 @@
 package springboot.domain.team;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import springboot.domain.number.Number;
 
 import javax.persistence.*;
@@ -15,12 +12,16 @@ import static javax.persistence.FetchType.LAZY;
 @Setter
 @NoArgsConstructor
 @Entity
-public class Team {
+public class PreTeam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private int team_name;
-    private int number_id;
+
+    @NonNull
+    private Long number_id;
+
+    private String number_name;
 
     private int team_issue_id;
 
@@ -32,8 +33,7 @@ public class Team {
     private LocalDate created_date = LocalDate.now();
 
     private LocalDate updated_date= LocalDate.now();
-    //@ManyToOne(targetEntity = Number.class,fetch = LAZY)
-    //@JoinColumn(name="n_id")
+
 
     public enum P_group{ //0은 Pre 1은 Main
         Pre, Main;
@@ -41,10 +41,11 @@ public class Team {
 
 
     @Builder
-    public Team(int team_name,P_group p_group, int number_id){
+    public PreTeam(int team_name, P_group p_group, Long number_id,String number_name){
         this.team_name = team_name;
         this.p_group = p_group;
         this.number_id = number_id;
+        this.number_name = number_name;
 
     }
 }

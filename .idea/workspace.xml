@@ -5,17 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f854c06d-239e-4cfd-b1b9-650ccfef0641" name="Changes" comment="number 1차 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/Team.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/TeamRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/service/team/TeamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/TeamApiController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/team/TeamResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/team/TeamSaveRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/common/CommonCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/common/CommonCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/MemberIssue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/MemberIssueRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/TeamIssue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/TeamIssueRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/Member.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/MemberRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/service/member/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/MemberApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberResponseDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/number/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/number/Number.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/TeamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/team/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/team/PreTeamService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/NumberApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/NumberApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/TeamApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/PreTeamApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/number/NumberRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/number/NumberRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/number/NumberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/number/NumberResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/team/TeamResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/team/TeamSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamSaveRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +112,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="springboot.domain.member" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="f3ms.main" />
@@ -128,7 +151,28 @@
       <workItem from="1664687901774" duration="4023000" />
       <workItem from="1664717217276" duration="1397000" />
       <workItem from="1664718713690" duration="307000" />
-      <workItem from="1664719024115" duration="7090000" />
+      <workItem from="1664719024115" duration="8205000" />
+      <workItem from="1664847713722" duration="3990000" />
+      <workItem from="1664878271266" duration="538000" />
+      <workItem from="1664949197424" duration="5040000" />
+      <workItem from="1665019767775" duration="999000" />
+      <workItem from="1665101348479" duration="3212000" />
+      <workItem from="1665118811263" duration="2507000" />
+      <workItem from="1665150256018" duration="2717000" />
+      <workItem from="1665219124956" duration="12135000" />
+      <workItem from="1665401178278" duration="6838000" />
+      <workItem from="1665452753403" duration="2097000" />
+      <workItem from="1665582308962" duration="1965000" />
+      <workItem from="1665632867523" duration="2204000" />
+      <workItem from="1665646824127" duration="9995000" />
+      <workItem from="1665677359973" duration="1215000" />
+      <workItem from="1665803603695" duration="2911000" />
+      <workItem from="1665844919338" duration="1541000" />
+      <workItem from="1665985815542" duration="190000" />
+      <workItem from="1666052939564" duration="5877000" />
+      <workItem from="1666090780642" duration="4067000" />
+      <workItem from="1666140533950" duration="1868000" />
+      <workItem from="1666147208116" duration="3467000" />
     </task>
     <servers />
   </component>
