@@ -5,24 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f854c06d-239e-4cfd-b1b9-650ccfef0641" name="Changes" comment="number 1차 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/exception/BusinessLogicException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/exception/ExceptionCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamJoinMemberResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberJoinNumberResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/MemberRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/member/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/team/PreTeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/team/PreTeamService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/MemberApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/MemberApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/PreTeamApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/PreTeamApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamSaveRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +39,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="f3ms" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="f3ms" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="f3ms" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="compileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -108,6 +114,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="springboot.domain.member" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="springboot.web.dto.member" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,6 +200,17 @@
       <workItem from="1667182104376" duration="656000" />
       <workItem from="1667186535345" duration="519000" />
       <workItem from="1667189449798" duration="636000" />
+      <workItem from="1667194163323" duration="655000" />
+      <workItem from="1667269268002" duration="3596000" />
+      <workItem from="1667353521639" duration="5713000" />
+      <workItem from="1667386993317" duration="323000" />
+      <workItem from="1667397368093" duration="2203000" />
+      <workItem from="1667443341363" duration="4089000" />
+      <workItem from="1667458068601" duration="1043000" />
+      <workItem from="1667461722933" duration="598000" />
+      <workItem from="1667463012223" duration="631000" />
+      <workItem from="1667486942206" duration="2053000" />
+      <workItem from="1667524154637" duration="3955000" />
     </task>
     <task id="LOCAL-00001" summary="number 1차 완료">
       <created>1666158872004</created>

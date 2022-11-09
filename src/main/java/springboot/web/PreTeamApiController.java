@@ -28,21 +28,21 @@ public class PreTeamApiController {
         return ResponseEntity.ok().body(preTeamService.save(params));
     }
 
-    @GetMapping("")
+    @GetMapping("")// 팀 전체 조회
     public ResponseEntity<List<PreTeamResponseDto>> findAll() {
         return ResponseEntity.ok().body(preTeamService.findAll());
     }
 
-    @GetMapping("/number/{number_id}")
+    @GetMapping("/number/{number_id}") //해당 기수 전체 팀 조회
     public ResponseEntity<List<PreTeamResponseDto>> findByNumberId(@PathVariable Long number_id){
         return ResponseEntity.ok().body(preTeamService.findByNumberId(number_id));
     }
 
-    @GetMapping("/{id}") //멤버정보 같이 줘야함
+    @GetMapping("/{id}") //해당 팀 조회 (팀 정보)+ 멤버정보 같이 줘야함
     public ResponseEntity<PreTeamJoinMemberResponseDto> FindById(@PathVariable Long id){
         return ResponseEntity.ok().body(preTeamService.findById(id));
     }
-    @PutMapping("/{id}")
+    @PutMapping("/{id}")//팀 정보 수정(비활성화 기능포함)
     public ResponseEntity<Long> update(@PathVariable final Long id, @RequestBody final PreTeamSaveRequestDto params){
         return ResponseEntity.ok().body(preTeamService.update(id, params));
     }

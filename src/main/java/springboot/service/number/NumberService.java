@@ -19,14 +19,13 @@ public class NumberService {
 
     @Transactional
     public Long save(final NumberRequestDto params){
-        Number sameNameCheck =numberRepository.findByNumber_name(params.getNumber_name());
-        if(sameNameCheck== null){
+        boolean numberNameDuplicate = numberRepository.existsByNumber_name(params.toEntity().getNumber_name());
+        if(numberNameDuplicate) {
+            throw new IllegalStateException("이미 존재하는 기수명 입니다.");
+        }else {
             Number entity = numberRepository.save(params.toEntity());
             return entity.getId();
-        }else{
-            return 404L;
         }
-
     }
     @Transactional
     public List<NumberResponseDto> findAll() {

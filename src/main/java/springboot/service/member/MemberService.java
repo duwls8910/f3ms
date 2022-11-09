@@ -5,8 +5,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import springboot.domain.member.Member;
 import springboot.domain.member.MemberRepository;
+import springboot.domain.number.Number;
+import springboot.domain.number.NumberRepository;
+import springboot.web.dto.member.MemberJoinNumberResponseDto;
 import springboot.web.dto.member.MemberRequestDto;
 import springboot.web.dto.member.MemberResponseDto;
+import springboot.web.dto.number.NumberResponseDto;
 
 import java.util.List;
 import java.util.Optional;
@@ -16,11 +20,17 @@ import java.util.stream.Collectors;
 @Service
 public class MemberService {
     private final MemberRepository memberRepository;
+    private final NumberRepository numberRepository;
 
     @Transactional
     public Long save(final MemberRequestDto params){
         Member entity = memberRepository.save(params.toEntity());
         return entity.getId();
+    }
+    @Transactional
+    public List<MemberResponseDto> findAll(){
+        List<Member> entity =  memberRepository.sortFindAll();
+        return entity.stream().map(MemberResponseDto::new).collect(Collectors.toList());
     }
     @Transactional
     public List<MemberResponseDto> findByNumberId(final Long number_id){
@@ -34,10 +44,11 @@ public class MemberService {
         return entity.stream().map(MemberResponseDto::new).collect(Collectors.toList());
     }
     @Transactional
-    public MemberResponseDto findById(final Long id) {
+    public MemberJoinNumberResponseDto findById(final Long id) {
         Member entity = memberRepository.findById(id)
                 .orElseThrow(()-> new IllegalArgumentException("no.."));
-        return new MemberResponseDto(entity);
+       Number number = numberRepository.findByNumber_id(entity.getNumber_id());
+        return new MemberJoinNumberResponseDto(entity, number);
     }
     @Transactional
     public Long update(final Long id , final MemberRequestDto params) {

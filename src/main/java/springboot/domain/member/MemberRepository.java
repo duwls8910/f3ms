@@ -7,9 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface MemberRepository extends JpaRepository<Member, Long> {
-    @EntityGraph(attributePaths = {"memberIssue"})
-    List<Member> findAll();
-
+    @Query(value = "select * from member m order by m.number_id, m.position_cd, m.member_name", nativeQuery = true)
+    List<Member> sortFindAll();
     @Query(value = "SELECT * FROM member m WHERE m.number_id = :number_id", nativeQuery = true)
     List<Member> findByNumberId(long number_id);
 
@@ -18,5 +17,6 @@ public interface MemberRepository extends JpaRepository<Member, Long> {
 
     @Query(value = "SELECT * FROM member WHERE pre_team_id = :pre_team_id", nativeQuery = true)
     List<Member> findByPreTeamId(Long pre_team_id);
+
 
 }

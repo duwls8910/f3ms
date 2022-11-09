@@ -2,17 +2,15 @@ package springboot.web.dto.member;
 
 import lombok.Builder;
 import lombok.Getter;
-import springboot.domain.issue.MemberIssue;
 import springboot.domain.member.Member;
+import springboot.domain.number.Number;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.OneToMany;
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
+
 @Getter
-public class MemberResponseDto  {
+public class MemberJoinNumberResponseDto {
     private long id;
 
     private String member_name;
@@ -20,7 +18,6 @@ public class MemberResponseDto  {
     private Boolean is_active;
     @Enumerated(EnumType.STRING)
     private Member.Position_cd position_cd;
-
 
     private Long main_team_id;
 
@@ -30,7 +27,7 @@ public class MemberResponseDto  {
 
     private LocalDate updated_date;
 
-    private Long number_id;
+    private Number number;
 
 //    @OneToMany(mappedBy = "member")//참조하는 필드
 //    private Set<MemberIssue> memberIssue = new HashSet<MemberIssue>();
@@ -40,16 +37,16 @@ public class MemberResponseDto  {
     }
 
     @Builder
-    public MemberResponseDto(Member entity){
+    public MemberJoinNumberResponseDto(Member entity , Number number){
         this.id = entity.getId();
         this.member_name = entity.getMember_name();
         //if(memberIssue != null) this.memberIssue = entity.getMemberIssue();
         this.is_active = entity.getIs_active();
         this.position_cd = entity.getPosition_cd();
-        this.number_id = entity.getNumber_id();
         this.main_team_id = entity.getMain_team_id();
         this.pre_team_id = entity.getPre_team_id();
         this.created_date = entity.getCreated_date();
         this.updated_date = entity.getUpdated_date();
+        this.number = number;
     }
 }

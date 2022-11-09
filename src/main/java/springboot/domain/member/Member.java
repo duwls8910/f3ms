@@ -51,14 +51,6 @@ public class Member {
         this.updated_date = updated_date;
     }
 
-    @Override
-    public String toString(){
-        return "Member {" +
-                "id : " + id +
-                ", member name : " + member_name +'\''+
-                ", member Issue : " +
-                "}";
-    }
     public void update(String member_name,Boolean is_active,Position_cd position_cd,Long main_team_id,Long pre_team_id){
         this.member_name = member_name;
         this.is_active = is_active;
