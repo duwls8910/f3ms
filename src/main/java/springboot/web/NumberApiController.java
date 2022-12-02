@@ -37,5 +37,8 @@ public class NumberApiController {
     public ResponseEntity<Long> update(@PathVariable final Long id,@RequestBody final NumberRequestDto params){
         return ResponseEntity.ok().body(numberService.update(id, params));
     }
-
+    @PatchMapping("/{id}")
+    public ResponseEntity<Long> closedUpdate(@PathVariable final Long id,@RequestBody final NumberRequestDto params){
+        return ResponseEntity.ok().body(numberService.closedUpdate(id, params));
+    }
 }

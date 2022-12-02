@@ -2,7 +2,6 @@ package springboot.web.dto.member;
 
 import lombok.Builder;
 import lombok.Getter;
-import springboot.domain.issue.MemberIssue;
 import springboot.domain.member.Member;
 
 import javax.persistence.EnumType;
@@ -32,8 +31,6 @@ public class MemberResponseDto  {
 
     private Long number_id;
 
-//    @OneToMany(mappedBy = "member")//참조하는 필드
-//    private Set<MemberIssue> memberIssue = new HashSet<MemberIssue>();
 
     public enum Position_cd{ //0은 be 1은 fe
         p_be, p_fe;

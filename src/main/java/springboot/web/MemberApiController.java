@@ -1,6 +1,7 @@
 package springboot.web;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import springboot.service.member.MemberService;
@@ -32,7 +33,7 @@ public class MemberApiController {
     }
 
     @GetMapping("/number/{number_id}") //해당 기수 전체 수강생 조회
-    public ResponseEntity<List<MemberResponseDto>> findByNumberId(@PathVariable Long number_id){
+    public ResponseEntity<List<MemberResponseDto>> findByNumberId(@Param("number_id")@PathVariable Long number_id){
         return ResponseEntity.ok().body(memberService.findByNumberId(number_id));
     }
     @GetMapping("/{id}") //수강생 개인 조회
@@ -42,5 +43,10 @@ public class MemberApiController {
     @PutMapping("/{id}") // 정보 수정 여기서 비활성화 가능
     public ResponseEntity<Long> update(@PathVariable final Long id, @RequestBody final MemberRequestDto params){
         return ResponseEntity.ok().body(memberService.update(id, params));
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Long> activeUpdate(@PathVariable final Long id, @RequestBody final MemberRequestDto params){
+       return ResponseEntity.ok().body(memberService.activeUpdate(id, params));
     }
 }

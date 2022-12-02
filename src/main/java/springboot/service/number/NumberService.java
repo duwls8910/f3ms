@@ -48,5 +48,11 @@ public class NumberService {
                 .orElseThrow(()-> new IllegalArgumentException("no.."));
         return new NumberResponseDto(entity);
     }
+    @Transactional
+    public Long closedUpdate(final Long id, final NumberRequestDto params){
+        Number entity = numberRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("not found number.."));
+        entity.closedUpdate(params.getIs_closed());
+        return id;
+    }
 
 }

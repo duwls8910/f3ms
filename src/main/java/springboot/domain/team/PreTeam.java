@@ -1,7 +1,6 @@
 package springboot.domain.team;
 
 import lombok.*;
-import springboot.domain.issue.MemberIssue;
 import springboot.domain.number.Number;
 
 import javax.persistence.*;
@@ -12,7 +11,6 @@ import java.util.Set;
 import static javax.persistence.FetchType.LAZY;
 
 @Getter
-@Setter
 @NoArgsConstructor
 @Entity
 public class PreTeam {
@@ -24,8 +22,6 @@ public class PreTeam {
     @NonNull
     private Long number_id;
 
-//    @OneToMany(mappedBy = "member")//참조하는 필드
-//    private Set<MemberIssue> memberIssue = new HashSet<MemberIssue>();
 
     private Boolean is_opened = true;
 
@@ -58,5 +54,8 @@ public class PreTeam {
         this.is_opened= is_opened;
         this.updated_date = LocalDate.now();
         this.comment = comment;
+    }
+    public void openedUpdate(Boolean is_opened){
+        this.is_opened = is_opened;
     }
 }

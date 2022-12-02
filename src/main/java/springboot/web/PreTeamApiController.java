@@ -20,11 +20,7 @@ public class PreTeamApiController {
     private final PreTeamService preTeamService;
 
     @PostMapping("")
-    public ResponseEntity<Long> save(@RequestBody final PreTeamSaveRequestDto params) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(params);
-        System.out.println("params 뭐들어오나 보자~~"+json);
-
+    public ResponseEntity<Long> save(@RequestBody final PreTeamSaveRequestDto params) {
         return ResponseEntity.ok().body(preTeamService.save(params));
     }
 
@@ -45,5 +41,9 @@ public class PreTeamApiController {
     @PutMapping("/{id}")//팀 정보 수정(비활성화 기능포함)
     public ResponseEntity<Long> update(@PathVariable final Long id, @RequestBody final PreTeamSaveRequestDto params){
         return ResponseEntity.ok().body(preTeamService.update(id, params));
+    }
+    @PatchMapping("/{id}")
+    public ResponseEntity<Long> openedUpdate(@PathVariable final Long id, @RequestBody final PreTeamSaveRequestDto params){
+        return ResponseEntity.ok().body(preTeamService.openedUpdate(id, params));
     }
 }

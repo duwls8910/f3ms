@@ -4,7 +4,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import springboot.domain.issue.MemberIssue;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -59,9 +58,9 @@ public class Member {
         this.pre_team_id = pre_team_id;
         this.updated_date = LocalDate.now();
     }
+    public void activeUpdate(Boolean is_active){
+        this.is_active = is_active;
+    }
 
-//    public void mappedMemberIssue(MemberIssue memberIssue){
-//        this.memberIssue.add(memberIssue);
-//    }
-    //이게 여기있으면 안될거 같은데..
+
 }

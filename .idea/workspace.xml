@@ -4,20 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f854c06d-239e-4cfd-b1b9-650ccfef0641" name="Changes" comment="number 1차 완료">
-      <change afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberJoinNumberResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f854c06d-239e-4cfd-b1b9-650ccfef0641" name="Changes" comment="1차 개발 범위">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/MemberIssue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/MemberIssueRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/TeamIssue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/TeamIssueRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/number/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/number/Number.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeamRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/member/MemberService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/team/PreTeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/team/PreTeamService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/MemberApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/MemberApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/NumberApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/NumberApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/PreTeamApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/PreTeamApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberJoinNumberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberJoinNumberResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamJoinMemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamJoinMemberResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamSaveRequestDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,15 +105,16 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/codestates/Downloads/yeojin/f3ms&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.intellij.jarRepository.settings.RemoteRepositoriesConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;5cb0e5964cb0e3126f4335b733dfe0c5&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -119,7 +131,20 @@
       <recent name="springboot.web.dto.member" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="springboot.Application" />
+      <module name="f3ms.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="springboot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="f3ms.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="springboot.Application" />
@@ -135,7 +160,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -211,6 +236,28 @@
       <workItem from="1667463012223" duration="631000" />
       <workItem from="1667486942206" duration="2053000" />
       <workItem from="1667524154637" duration="3955000" />
+      <workItem from="1667974828750" duration="376000" />
+      <workItem from="1667976157855" duration="292000" />
+      <workItem from="1668096947876" duration="36000" />
+      <workItem from="1668406745201" duration="900000" />
+      <workItem from="1668477833557" duration="2446000" />
+      <workItem from="1668655689564" duration="921000" />
+      <workItem from="1668751413109" duration="1435000" />
+      <workItem from="1668953866292" duration="6265000" />
+      <workItem from="1669044377872" duration="1041000" />
+      <workItem from="1669078885467" duration="2062000" />
+      <workItem from="1669166897427" duration="3493000" />
+      <workItem from="1669214227691" duration="3557000" />
+      <workItem from="1669253780269" duration="1130000" />
+      <workItem from="1669690269912" duration="258000" />
+      <workItem from="1669697661805" duration="188000" />
+      <workItem from="1669697893787" duration="3000" />
+      <workItem from="1669699050754" duration="994000" />
+      <workItem from="1669770959981" duration="159000" />
+      <workItem from="1669815576356" duration="6620000" />
+      <workItem from="1669822405625" duration="1155000" />
+      <workItem from="1669882708467" duration="897000" />
+      <workItem from="1669999570399" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="number 1차 완료">
       <created>1666158872004</created>
@@ -219,11 +266,28 @@
       <option name="project" value="LOCAL" />
       <updated>1666158872004</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1차 개발 범위">
+      <created>1667974876154</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667974876154</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:javax.persistence:javax.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:javax.validation:validation-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -244,6 +308,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="number 1차 완료" />
-    <option name="LAST_COMMIT_MESSAGE" value="number 1차 완료" />
+    <MESSAGE value="1차 개발 범위" />
+    <option name="LAST_COMMIT_MESSAGE" value="1차 개발 범위" />
   </component>
 </project>

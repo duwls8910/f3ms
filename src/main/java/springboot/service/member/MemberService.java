@@ -3,6 +3,7 @@ package springboot.service.member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
 import springboot.domain.member.Member;
 import springboot.domain.member.MemberRepository;
 import springboot.domain.number.Number;
@@ -55,6 +56,12 @@ public class MemberService {
         Member entity = memberRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("nope.."));
         entity.update(params.getMember_name(), params.getIs_active(),params.getPosition_cd(),params.getMain_team_id(),params.getPre_team_id());
+        return id;
+    }
+    @Transactional
+    public Long activeUpdate(final Long id,  final MemberRequestDto params) {
+        Member entity = memberRepository.findById(id).orElseThrow(()-> new IllegalArgumentException("not found member.."));
+        entity.activeUpdate(params.getIs_active());
         return id;
     }
 

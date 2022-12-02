@@ -48,5 +48,8 @@ public class Number {
         this.is_closed = is_closed;
         this.updated_date = LocalDate.now();
     }
+    public void closedUpdate(Boolean is_closed){
+        this.is_closed = is_closed;
+    }
 
 }

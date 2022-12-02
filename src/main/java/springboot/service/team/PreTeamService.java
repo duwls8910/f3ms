@@ -27,7 +27,7 @@ public class PreTeamService {
     private final MemberRepository memberRepository;
 
     @Transactional
-    public Long save(final PreTeamSaveRequestDto params) throws JsonProcessingException { //number_id 도 받아서
+    public Long save(final PreTeamSaveRequestDto params) { //number_id 도 받아서
         PreTeam entity = preTeamRepository.save(params.toEntity());
 
         return entity.getId();
@@ -51,7 +51,7 @@ public class PreTeamService {
        List<Member> memberInfo = memberRepository.findByPreTeamId(id);
         return new PreTeamJoinMemberResponseDto(entity,memberInfo);
     }
-    //여기서 memberrepository 의 findbyteamid를 만들어서 member 타입 변수에 담아서 joinresponsedto에 파라미터 넘겨주고 joinresponsedto 생성자에 넣어주면???
+
 
     @Transactional
     public Long update(final Long id, final PreTeamSaveRequestDto params){
@@ -60,5 +60,15 @@ public class PreTeamService {
         entity.update(params.getTeam_name(), params.getNumber_id(), params.getIs_opened(), params.getComment());
         return id;
     }
+    @Transactional
+    public Long openedUpdate(final Long id, final PreTeamSaveRequestDto params){
+        PreTeam entity = preTeamRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("not found preteam.."));
+        entity.openedUpdate(params.getIs_opened());
+        System.out.println("~~~~~~~~~~~~~~~~~~~여기좀 보세요!!!!~~~~~~~~~");
+        System.out.println(entity.getIs_opened());
+        System.out.println(params.getIs_opened());
+        return id;
+    }
 
 }
+//여기서 memberrepository 의 findbyteamid를 만들어서 member 타입 변수에 담아서 joinresponsedto에 파라미터 넘겨주고 joinresponsedto 생성자에 넣어주면???

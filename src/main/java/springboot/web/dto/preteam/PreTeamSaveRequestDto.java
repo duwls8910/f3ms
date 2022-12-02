@@ -1,5 +1,6 @@
 package springboot.web.dto.preteam;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import springboot.domain.team.PreTeam;
@@ -19,7 +20,7 @@ public class PreTeamSaveRequestDto {
     private String comment;
     private long number_id;
 
-    private Boolean is_opened = true;
+    private Boolean is_opened;
 
     @Enumerated(EnumType.STRING)
     private PreTeam.P_group p_group ;
@@ -32,9 +33,15 @@ public class PreTeamSaveRequestDto {
     private LocalDate updated_date;
 
 
+    @Builder
+    public PreTeamSaveRequestDto(int team_name,String number_name,String comment,Boolean is_opened,PreTeam.P_group p_group){
+        this.team_name = team_name;
+        this.number_name = number_name;
+        this.comment = comment;
+        this.is_opened = is_opened;
+        this.p_group= p_group;
+    }
     public PreTeam toEntity(){ //domain.team의 Team.build 메서드와 연결되어있음
-        System.out.println("여기 TeamSaveRequestDto toEntity()!!!");
-
         return PreTeam.builder()
                 .p_group(p_group)
                 .number_id(number_id)

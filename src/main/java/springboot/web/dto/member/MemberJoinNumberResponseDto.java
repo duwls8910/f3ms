@@ -29,8 +29,7 @@ public class MemberJoinNumberResponseDto {
 
     private Number number;
 
-//    @OneToMany(mappedBy = "member")//참조하는 필드
-//    private Set<MemberIssue> memberIssue = new HashSet<MemberIssue>();
+
 
     public enum Position_cd{ //0은 be 1은 fe
         p_be, p_fe;
@@ -40,7 +39,6 @@ public class MemberJoinNumberResponseDto {
     public MemberJoinNumberResponseDto(Member entity , Number number){
         this.id = entity.getId();
         this.member_name = entity.getMember_name();
-        //if(memberIssue != null) this.memberIssue = entity.getMemberIssue();
         this.is_active = entity.getIs_active();
         this.position_cd = entity.getPosition_cd();
         this.main_team_id = entity.getMain_team_id();

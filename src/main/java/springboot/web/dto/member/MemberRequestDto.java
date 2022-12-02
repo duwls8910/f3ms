@@ -3,7 +3,6 @@ package springboot.web.dto.member;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import springboot.domain.issue.MemberIssue;
 import springboot.domain.member.Member;
 
 import java.time.LocalDate;
@@ -16,7 +15,6 @@ import java.util.Set;
 public class MemberRequestDto {
     private String member_name;
 
-    private Set<MemberIssue> memberIssue = new HashSet<MemberIssue>();
 
     private Boolean is_active = true;
 
@@ -33,7 +31,6 @@ public class MemberRequestDto {
     @Builder
     public MemberRequestDto(String member_name, Boolean is_active, Member.Position_cd position_cd, Long number_id, Long main_team_id, Long pre_team_id, LocalDate updated_date){
         this.member_name = member_name;
-        //if(memberIssue != null) this.memberIssue = memberIssue;
         this.is_active = is_active;
         this.position_cd = position_cd;
         this.number_id = number_id;

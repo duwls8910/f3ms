@@ -1,7 +1,6 @@
 package springboot.web.dto.preteam;
 
 import lombok.Getter;
-import springboot.domain.issue.MemberIssue;
 import springboot.domain.member.Member;
 import springboot.domain.team.PreTeam;
 
