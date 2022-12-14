@@ -48,7 +48,7 @@ public class MemberService {
     public MemberJoinNumberResponseDto findById(final Long id) {
         Member entity = memberRepository.findById(id)
                 .orElseThrow(()-> new IllegalArgumentException("no.."));
-       Number number = numberRepository.findByNumber_id(entity.getNumber_id());
+        Number number = numberRepository.findByNumber_id(entity.getNumber_id());
         return new MemberJoinNumberResponseDto(entity, number);
     }
     @Transactional

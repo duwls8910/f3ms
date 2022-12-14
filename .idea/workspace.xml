@@ -4,32 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f854c06d-239e-4cfd-b1b9-650ccfef0641" name="Changes" comment="1차 개발 범위">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="f854c06d-239e-4cfd-b1b9-650ccfef0641" name="Changes" comment="Patch API 추가">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/MemberIssue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/MemberIssueRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/TeamIssue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/issue/TeamIssueRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/member/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/member/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/number/Number.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/number/Number.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/number/NumberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeamRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/domain/team/PreTeamRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/member/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/member/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/number/NumberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/service/team/PreTeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/service/team/PreTeamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/MemberApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/MemberApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/NumberApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/NumberApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/PreTeamApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/PreTeamApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberJoinNumberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberJoinNumberResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/member/MemberResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamJoinMemberResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamJoinMemberResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamSaveRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/springboot/web/dto/preteam/PreTeamSaveRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +235,7 @@
       <workItem from="1669815576356" duration="6620000" />
       <workItem from="1669822405625" duration="1155000" />
       <workItem from="1669882708467" duration="897000" />
-      <workItem from="1669999570399" duration="1036000" />
+      <workItem from="1669999570399" duration="2465000" />
     </task>
     <task id="LOCAL-00001" summary="number 1차 완료">
       <created>1666158872004</created>
@@ -273,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667974876154</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Patch API 추가">
+      <created>1670002002019</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670002002019</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +294,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="number 1차 완료" />
     <MESSAGE value="1차 개발 범위" />
-    <option name="LAST_COMMIT_MESSAGE" value="1차 개발 범위" />
+    <MESSAGE value="Patch API 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="Patch API 추가" />
   </component>
 </project>
